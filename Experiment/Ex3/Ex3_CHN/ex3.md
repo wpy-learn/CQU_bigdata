@@ -119,6 +119,11 @@ python3 ModelBasedSklearn.py
 
 这里介绍一种数据预处理的操作。
 
+这里请先下载好scikit-image运行库，以便对feature_hog.py成功编译。
+
+```bash
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple numpy scikit-image==0.17.2
+
 先在本地进行`HOG`特征的提取，并把图片文件写成`csv`文件，这样就可以复用之前实验4的方法进行`rdd`的模型训练了。**请补充`feature_hog.py`文件**，完成`hog`特征的提取，并保存得到`src/train.csv`和`src/test.csv`这两个文件，这两个文件中每一行都有大量数字，其中最后一个数字是图片的`label`，其它的数字就是我们提取的`hog`特征，这两个文件就是后续分布式`spark`模型训练的输入。
 
 ![image-20201214020417806](https://blog-imgs-1256686095.cos.ap-guangzhou.myqcloud.com/feature_hog_code.png)
@@ -353,7 +358,7 @@ sudo vim /etc/hosts
 现在我们假设使用模型的用户只有`python3`和`pip3`，那么我们需要安装必要的库文件：
 
 ```bash
-sudo pip3 install numpy scikit-image==0.17.2 django==2.1.8 pyspark==2.4.7
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple numpy scikit-image==0.17.2 django==2.1.8 pyspark==2.4.7
 ```
 
 **注意：这里安装的特征库如`scikit-image`必须和之前提取特征用的特征库完全相同，版本也要相同，且这里安装的`pyspark`版本也要和训练模型时的`pyspark`版本相同，否则应用的预测结果会出问题。**
