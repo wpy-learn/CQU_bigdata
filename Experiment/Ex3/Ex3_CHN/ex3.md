@@ -453,7 +453,7 @@ sudo python3 manage.py runserver 0.0.0.0:80 --noreload
 如果你是在`windows`下运行本地`web`应用，请进入到项目文件夹下，并使用如下的指令
 
 ```bash
-python manage.py runserver localhost:8000 --noreload
+python3 manage.py runserver localhost:8000 --noreload
 ```
 
 这个指令可以将`django`应用直接挂载到本地的`8000`端口，在本地浏览器里直接输入`localhost:8000`就可以直接访问应用
