@@ -227,7 +227,7 @@ python3 ModelBasedSklearn.py
 
    ```bash
    cd /usr/local/spark
-   bin/spark-submit --master spark://master:7077 --executor-memory 500M /home/hadoop/chn/rdd_logistic.py
+   bin/spark-submit --master spark://master:7077 --executor-memory 2G /home/hadoop/chn/rdd_logistic.py
    ```
 
 3. 运行过程
